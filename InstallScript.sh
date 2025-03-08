@@ -12,7 +12,13 @@ dnf update
 $DNF_INSTALL code
 
 # Discord
+$DNF_INSTALL discord
+
+# VSCode
 $FLAT_INSTALL https://flathub.org/repo/appstream/com.visualstudio.code.flatpakref
+
+# Spotify
+$FLAT_INSTALL spotify
 
 # SQLite
 $DNF_INSTALL sqlite
@@ -24,6 +30,11 @@ $DNF_INSTALL vim
 
 # Steam
 $DNF_INSTALL steam
+
+# Polychromatic (for Razer Stuff)
+dnf config-manager addrepo --from-repofile=https://openrazer.github.io/hardware:razer.repo
+$DNF_INSTALL polychromatic
+gpasswd -a $USER plugdev
 
 # NVidia Drivers
 $DNF_INSTALL akmod-nvidia
@@ -41,3 +52,6 @@ chmod +x StartupScript.sh
 #$DNF_INSTALL /home/tcaetano/Downloads/goxlr-utility-*.x86_64.rpm
 #$DNF_INSTALL /home/tcaetano/Downloads/VNC-Viewer-*-Linux-x64.rpm
 #$DNF_INSTALL /home/tcaetano/Downloads/powershell-*.rh.x86_64.rpm
+
+# Reboot
+reboot -nf
