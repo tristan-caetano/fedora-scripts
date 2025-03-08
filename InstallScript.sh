@@ -14,9 +14,6 @@ $DNF_INSTALL code
 # Discord
 $DNF_INSTALL discord
 
-# VSCode
-$FLAT_INSTALL https://flathub.org/repo/appstream/com.visualstudio.code.flatpakref
-
 # Spotify
 $FLAT_INSTALL spotify
 
