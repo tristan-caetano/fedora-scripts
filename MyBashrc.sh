@@ -5,5 +5,7 @@ alias vi='sudo vim'
 alias reset_bashrc='source ~/.bashrc'
 alias scripts='cd ~/Documents/Scripts/'
 alias spotify='flatpak run com.spotify.Client'
+alias deluge='flatpak run org.deluge_torrent.deluge'
 alias startup='~/Documents/Scripts/StartupScript.sh'
 alias homeserver='ssh tcaetano@192.168.1.135'
+alias vpn="/home/tcaetano/Documents/Applications/hide.me/hide.me-server-switch/hide.me-sw.sh"

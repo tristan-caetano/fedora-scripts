@@ -1,5 +1,7 @@
 #! /bin/bash
 
+# This script can be cloned anywhere, but it should be cloned in ~/Documents/Scripts
+
 DNF_INSTALL="dnf -y install"
 FLAT_INSTALL="flatpak install -y"
 
@@ -46,11 +48,20 @@ $DNF_INSTALL akmod-nvidia
 $DNF_INSTALL xorg-x11-drv-nvidia-cuda
 $DNF_INSTALL xorg-x11-drv-nvidia-libs
 
+# SSHFS
+$DNF_INSTALL sshfs
+mkdir /mnt/optiplexhome
+sudo chmod +777 /mnt/optiplexhome
+
+# Deluge
+flatpak install fedora -y deluge
+
 # hide.me install
 cd $APPLICATIONS_DIR
 mkdir hide.me
 cd hide.me
 curl -L https://hide.me/download/linux-amd64 | tar -xz && sudo ./install.sh
+git clone https://github.com/Seyloria/hide.me-server-switch.git
 
 # Minecraft download
 cd $APPLICATIONS_DIR
