@@ -9,3 +9,4 @@ alias deluge='flatpak run org.deluge_torrent.deluge'
 alias startup='~/Documents/Scripts/StartupScript.sh'
 alias homeserver='ssh tcaetano@192.168.1.135'
 alias vpn="/home/tcaetano/Documents/Applications/hide.me/hide.me-server-switch/hide.me-sw.sh"
+alias optiplexmnt="sshfs -o allow_other tcaetano@192.168.1.135:/ /mnt/optiplexhome"
