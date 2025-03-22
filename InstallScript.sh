@@ -53,6 +53,9 @@ $DNF_INSTALL sshfs
 mkdir /mnt/optiplexhome
 sudo chmod +777 /mnt/optiplexhome
 
+# Crontab
+$DNF_INSTALL cronie
+
 # Deluge
 flatpak install fedora -y deluge
 
