@@ -2,13 +2,20 @@
 
 # This script can be cloned anywhere, but it should be cloned in ~/Documents/Scripts
 
+# Setting up install commands
 DNF_INSTALL="dnf -y install"
 FLAT_INSTALL="flatpak install -y"
 
+# Setting up important directories
 SCRIPTS_DIR=$(pwd)
 APPLICATIONS_DIR="/home/$USER/Documents/Applications"
+PACKAGES_DIR="/home/$USER/Documents/Packages"
 
+# Creating directories
 mkdir $APPLICATIONS_DIR
+mkdir $PACKAGES_DIR
+
+# DNF INSTALLATIONS *************************************************************************
 
 # RPM Fusion
 $DNF_INSTALL https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
@@ -20,9 +27,6 @@ $DNF_INSTALL code
 
 # Discord
 $DNF_INSTALL discord
-
-# Spotify
-$FLAT_INSTALL spotify
 
 # SQLite
 $DNF_INSTALL sqlite
@@ -56,8 +60,24 @@ sudo chmod +777 /mnt/optiplexhome
 # Crontab
 $DNF_INSTALL cronie
 
+# FLATPAK INSTALLATIONS *********************************************************************
+
+# Spotify
+$FLAT_INSTALL spotify
+
 # Deluge
 flatpak install fedora -y deluge
+
+# RPM INSTALLATIONS *************************************************************************
+
+# Team Viewer
+cd $PACKAGES_DIR
+mkdir TeamViewer
+cd TeamViewer
+wget https://download.teamviewer.com/download/linux/teamviewer.x86_64.rpm
+$DNF_INSTALL teamviewer.x86_64.rpm
+
+# MANUAL INSTALLATIONS **********************************************************************
 
 # hide.me install
 cd $APPLICATIONS_DIR
