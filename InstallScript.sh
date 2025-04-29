@@ -60,6 +60,16 @@ sudo chmod +777 /mnt/optiplexhome
 # Crontab
 $DNF_INSTALL cronie
 
+# Dolphin Emulator
+$DNF_INSTALL dolphin-emu
+
+# RetroArch
+$DNF_INSTALL retroarch
+
+# Input Remapper
+$DNF_INSTALL input-remapper
+systemctl enable --now input-remapper
+
 # FLATPAK INSTALLATIONS *********************************************************************
 
 # Spotify
